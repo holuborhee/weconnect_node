@@ -34,7 +34,7 @@ class BusinessController {
    */
   static create(req, res) {
     const {
-      name, about, category, location,
+      name,
     } = req.body;
 
     if (!req.body.name) {
@@ -59,7 +59,7 @@ class BusinessController {
    * @returns {object} res.
    */
   static update(req, res) {
-    const id = req.params.id;
+    const { id } = req.params;
 
     res.status(200).send({
     	message: `You want to update business with id of ${id}`,
@@ -76,7 +76,7 @@ class BusinessController {
    * @returns {object} res.
    */
   static show(req, res) {
-  	const id = req.params.id;
+  	const { id } = req.params;
 
     res.status(200).send({
     	message: `Return details of business with id of ${id}`,
@@ -93,7 +93,7 @@ class BusinessController {
   	* @returns {object} res.
   	*/
   static destroy(req, res) {
-  	const id = req.params.id;
+  	const { id } = req.params;
 
   	res.send(204).send(`You want to delete business with id of ${id}`);
   }

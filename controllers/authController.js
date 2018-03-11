@@ -14,7 +14,7 @@ class AuthController {
      * @returns {object} res.
      */
   static register(req, res) {
-    const { name, phone, email } = req.body;
+    const { name } = req.body;
 
     if (!name) {
       return res.status(400).send({

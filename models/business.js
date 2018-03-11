@@ -33,8 +33,8 @@ class Business {
     return new Business(b);
   }
 
-  static find(i) {
-    i = parseInt(i, 10);
+  static find(id) {
+    const i = parseInt(id, 10);
     const business = businesses.find(b => b.id === i);
     return (business && new Business(business)) || null;
   }
@@ -43,19 +43,19 @@ class Business {
   	return businesses;
   }
 
-  static at(location) {
+  /* static at(location) {
 
-  }
+  } */
 
-  static under(category) {
-  	category = parseInt(category, 10);
+  static under(cat) {
+  	const category = parseInt(cat, 10);
   	const filtered = businesses.filter(b => b.category === category);
   	return filtered;
   }
 
-  static nameHas(query) {
+  /* static nameHas(query) {
 
-  }
+  } */
 }
 
 export default Business;

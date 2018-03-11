@@ -47,6 +47,8 @@ describe('Business', () => {
       const b = new Business({
         name: 'Noble Computers', user: 1, category: 4, latitude: 3.142, longitude: 4.5678, address: '31, Mbaise Road, Owerri',
       });
+
+      return b;
     };
 
 
@@ -74,7 +76,7 @@ describe('Business', () => {
   });
 
   it('find(i) should return null if no value is found for i', (done) => {
-    expect(Business.find(6)).to.be.null;
+    expect(Business.find(6)).to.be.null; /* eslint no-unused-expressions: "off" */
     done();
   });
 

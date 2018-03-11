@@ -1,15 +1,15 @@
-import db from '../db.js';
+import db from '../lib/db';
 
 const { users } = db;
 class User {
-  static find(i) {
-  	i = parseInt(i, 10);
-    users.map((user) => {
-    	if (user.id === i) { return user; }
-    });
+  static find(id) {
+  	const i = parseInt(id, 10);
+    users.map(user => user.id === i);
   }
 
   static all() {
 
   }
 }
+
+export default User;
