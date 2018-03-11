@@ -1,5 +1,5 @@
 {
-  "name": "bookstore",
+  "name": "WeConnect",
   "version": "1.0.0",
   "description": "A bookstore API",
   "main": "server.js",
