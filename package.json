@@ -28,12 +28,13 @@
     "istanbul": "^0.4.5",
     "mocha": "^2.4.5",
     "mocha-lcov-reporter": "^1.3.0",
-    "nodemon": "^1.17.1"
+    "nodemon": "^1.17.1",
+    "prettier": "1.11.1"
   },
   "scripts": {
-    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore .",
+    "pretest": "eslint --ignore-path .gitignore .",
     "node": "npm run pretest && babel-node lib/index.js",
-    "start": "npm run pretest && nodemon lib/index.js --exec babel-node",
+    "start": "npm run pretest & nodemon lib/index.js --exec babel-node",
     "build": "npm run pretest && babel lib -d dist",
     "serve": "node dist/index.js",
     "test": "mocha --compilers js:babel-register"
