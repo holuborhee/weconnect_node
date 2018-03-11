@@ -1,0 +1,42 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "WEConnect API",
+    "description": "API to have access to weconnect actions"
+  },
+  "schemes": [
+    "https"
+  ],
+  "host": "weconnect.herokuapp.com",
+  "basePath": "/docs",
+  "paths": {
+    "/business": {
+      "get": {
+        "summary": "Gets all business",
+        "description": "Returns a list containing all businesses.",
+        "responses": {
+          "200": {
+            "description": "A list of Business",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "address": {
+                    "type": "object"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
