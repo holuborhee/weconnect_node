@@ -33,9 +33,9 @@
   },
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
-    "node": "npm run pretest && babel-node lib/index.js",
+    "dev": "npm run pretest && babel-node lib/index.js",
     "start": "nodemon lib/index.js --exec babel-node",
-    "dev": "nodemon lib/index.js --exec \"npm run pretest && babel-node\"",
+    "dev-start": "nodemon lib/index.js --exec \"npm run pretest && babel-node\"",
     "build": "npm run pretest && babel lib -d dist",
     "serve": "node dist/index.js",
     "test": "mocha --compilers js:babel-register"
